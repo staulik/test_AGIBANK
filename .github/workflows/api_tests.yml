@@ -10,7 +10,7 @@ on:
       - main
 
   schedule:
-    - cron: '0 22 * * 5'  # 19h de Brasília (UTC+3 → 22h UTC)
+    - cron: '0 22 * * 5'  # Toda sexta-feira às 19h (horário de Brasília / UTC-3)
 
 jobs:
   api-tests:
@@ -30,7 +30,7 @@ jobs:
           gem install bundler
           bundle install
 
-      - name: Executar testes (aceita falhas esperadas)
+      - name: Executar testes e gerar relatório
         run: RUBYOPT='-W:no-deprecated' bundle exec cucumber -p default || true
 
       - name: Upload do relatório ReportBuilder
@@ -39,3 +39,11 @@ jobs:
         with:
           name: relatorio-dog-api
           path: report_builder/*.html
+
+      - name: Upload do relatório Cucumber HTML
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cucumber-html-report
+          path: report_builder/cucumber_report.html
+
