@@ -10,7 +10,7 @@ on:
       - main
 
   schedule:
-    - cron: '38 19 * * 5'  # Toda sexta-feira às 19h (horário de Brasília / UTC-3)
+    - cron: '42 19 * * 5'  # Toda sexta-feira às 19h (horário de Brasília / UTC-3)
 
 jobs:
   api-tests:
