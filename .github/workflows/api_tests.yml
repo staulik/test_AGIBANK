@@ -35,7 +35,7 @@ jobs:
 
       - name: Upload do relatório ReportBuilder
         if: always()
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: relatorio-dog-api
           path: report_builder/*.html
