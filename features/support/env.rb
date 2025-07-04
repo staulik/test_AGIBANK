@@ -11,7 +11,7 @@ Dir.mkdir('report_builder') unless File.directory?('report_builder')
 at_exit do
   ReportBuilder.configure do |config|
     config.input_path = 'report.json'
-    config.report_path = 'report_builder/agi_regression_dogapi_with_values'
+    config.report_path = 'report_builder/regression_dogapi'
     config.report_types = [:html]
     config.report_title = 'AgiBank - Regression Test DogApi'
     config.color = 'indigo'

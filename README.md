@@ -55,11 +55,38 @@ Este projeto está configurado com uma pipeline automatizada que roda os testes 
 Arquivo de workflow:
 .github/workflows/api_tests.yml
 
-📊 Relatórios
-Após a execução dos testes, é gerado um relatório HTML com os resultados, disponível em:
+## 📊 Relatórios
 
+Após a execução dos testes, dois tipos de relatórios são gerados automaticamente:
 
+### ✅ 1. Relatório Cucumber (Padrão)
+
+Gerado diretamente pelo Cucumber com saída estruturada em JSON, HTML ou no terminal (pretty).
+
+- Arquivo JSON:  
+report.json
+
+- Arquivo HTML (se configurado no perfil):  
 test_results/Resultado_Testes.html
+
+Esse relatório mostra os cenários, passos, resultados e logs básicos da execução.
+
+
+### ✅ 2. Relatório Customizado (ReportBuilder)
+
+Gerado com base no `report.json`, esse relatório tem layout mais amigável, visual limpo e informações consolidadas.
+
+- Caminho:  
+report_builder/regression_dogapi.html
+
+- Conteúdo:
+- Cenários pass/fail
+- Tabela resumo
+- Gráficos de status
+- Tempo total de execução
+
+---
+
 🤝 Contribuições
 Sinta-se à vontade para sugerir melhorias ou enviar pull requests.
 Esse projeto é um exercício técnico e pode evoluir com novas abordagens e boas práticas!
