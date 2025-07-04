@@ -1,0 +1,1129 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <title>AgiBank - Regression Test DogApi</title>
+
+  <link rel="icon" href="https://reportbuilder.rajatthareja.com/rb.ico">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" media="screen,projection"/>
+  <link href="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.9/css/report.builder.min.css" rel="stylesheet">
+
+  
+</head>
+
+  <body>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.0/Chart.min.js"></script>
+<script type="text/javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+<header class="indigo lighten-5">
+  <div class="row indigo lighten-1">
+    <div class="col m6 hide-on-small-only">
+      <h5 class="truncate white-text tooltipped" data-tooltip="AgiBank - Regression Test DogApi">AgiBank - Regression Test DogApi</h5>
+    </div>
+
+    <div class="col m6 s12 indigo lighten-1">
+      <ul class="tabs indigo lighten-1 row" style="overflow-x: hidden">
+        <li class="tab col s3">
+          <a class="indigo lighten-3 active blue-text waves-effect waves-light tooltipped" data-tooltip="Results Overview" href="#overview"><i class="material-icons">assessment</i> Overview</a>
+        </li>
+        <li class="tab col s3">
+          <a class="indigo lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios by Features" href="#features"><i class="material-icons">view_headline</i> Features</a>
+        </li>
+        <li class="tab col s3">
+          <a class="indigo lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Scenarios Summary Table" href="#summary"><i class="material-icons">view_comfy</i> Summary</a>
+        </li>
+        <li class="tab col s3">
+          <a class="indigo lighten-3 white-text waves-effect waves-light tooltipped" data-tooltip="Failed Scenarios" href="#errors"><i class="material-icons">bug_report</i> Errors</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</header>
+
+
+    
+
+    
+    
+
+    
+    
+        
+        <div id="g0f0s0" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+
+    <h5>Listar todas as raças disponíveis (0.698s)</h5>
+    features/specifications/dog_api.feature:8
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Quando </b> faço a requisição para listar raças (0.662s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> o status da resposta deve ser 200 (0.008s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> a lista de raças deve conter várias raças (0.028s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s1" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+
+    <h5>Verificar se a raça &#39;retriever&#39; está presente na lista (0.637s)</h5>
+    features/specifications/dog_api.feature:13
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Quando </b> faço a requisição para listar raças (0.612s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> o status da resposta deve ser 200 (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> o corpo deve conter a raça &quot;retriever&quot; (0.025s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s2" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+
+    <h5>Obter imagem de uma raça específica (0.626s)</h5>
+    features/specifications/dog_api.feature:18
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Quando </b> faço a requisição de imagens da raça &quot;retriever&quot; (0.613s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> o status da resposta deve ser 200 (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> o corpo deve conter URLs de imagens (0.014s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s3" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+
+    <h5>Obter imagem aleatória (0.649s)</h5>
+    features/specifications/dog_api.feature:23
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Quando </b> faço a requisição de imagem aleatória (0.637s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> o status da resposta deve ser 200 (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> o corpo deve conter uma URL de imagem@schema (0.012s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s4" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+
+    <h5>Validar contrato da lista de raças (0.693s)</h5>
+    features/specifications/dog_api.feature:28
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu faça uma requisição para listar todas as raças (0.591s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> a resposta deve conter status 200 (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>E </b> valido o schema &quot;features/schemas/schema_lista_racas.json&quot; (0.102s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+        
+        <div id="g0f0s5" class="modal modal-fixed-footer">
+  <div class="modal-content">
+
+    
+        
+            <div class="chip"><i class="material-icons rotate-45">label</i>@schema_fail</div>
+        
+    
+
+    <h5>Validar contrato com schema inválido (0.649s)</h5>
+    features/specifications/dog_api.feature:34
+
+    
+        
+    
+
+    <ul class="collection stepList">
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que a API Dog está disponível (Contexto) (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Dado </b> que eu faça uma requisição para listar todas as raças (0.636s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step passed">
+  
+
+  <b>Então </b> a resposta deve conter status 200 (0.000s)
+
+  
+
+  
+
+  
+  
+  
+
+
+
+
+
+
+  
+</li>
+
+      
+          <li class="collection-item step failed">
+  
+
+  <b>E </b> valido o schema &quot;features/schemas/schema_errado.json&quot; (0.013s)
+
+  
+
+  
+
+  
+  
+  
+
+
+    
+    
+    
+    <pre>The property &#39;#/&#39; did not contain a required property of &#39;erro_na_resposta&#39; (JSON::Schema::ValidationError)
+./features/pages/dog_api.rb:80:in `validar_schema&#39;
+./features/step_definitions/dog_api_steps.rb:49:in `&quot;valido o schema {string}&quot;&#39;
+features/specifications/dog_api.feature:37:in `valido o schema &quot;features/schemas/schema_errado.json&quot;&#39;</pre>
+
+
+
+
+
+  
+</li>
+
+      
+    </ul>
+
+    
+        
+    
+  </div>
+
+  <div class="modal-footer">
+    <span class="modal-action modal-close waves-effect waves-green btn-flat"><i class="material-icons">close</i></span>
+  </div>
+</div>
+
+    
+
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        
+        $('#g0f0s0').modal();
+        
+        $('#g0f0s1').modal();
+        
+        $('#g0f0s2').modal();
+        
+        $('#g0f0s3').modal();
+        
+        $('#g0f0s4').modal();
+        
+        $('#g0f0s5').modal();
+        
+        $('#g0f0s6').modal();
+        
+    });
+</script>
+
+
+    <main class="indigo lighten-5">
+      <div class="row">
+
+        <div id="overview" class="col s12 indigo lighten-5">
+          <div class="row">
+  <div class="col m4 s12">
+    <canvas id="featuresDoughnut" width="400" height="400"></canvas>
+    <table id="metaDataFeatures" class="bordered">
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="col m4 s12">
+    <canvas id="scenariosDoughnut" width="400" height="400"></canvas>
+    <table id="metaDataScenarios" class="bordered">
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <div class="col m4 s12">
+    <table id="metaData" class="bordered">
+      <tbody>
+      <tr><th>Total Time</th><td>3.953s</td></tr>
+      
+          <tr>
+            <th>Ambiente</th>
+            <td>Desenvolvimento</td>
+          </tr>
+      
+          <tr>
+            <th>Browser</th>
+            <td>Chrome</td>
+          </tr>
+      
+          <tr>
+            <th>Tipo do Teste</th>
+            <td>API - BackEnd</td>
+          </tr>
+      
+          <tr>
+            <th>Cliente</th>
+            <td>AGIBANK</td>
+          </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+
+        </div>
+
+        <div id="features" class="col s12 indigo lighten-5 white-text">
+          <ul class="featureList collapsible popout" data-collapsible="expandable">
+  
+      
+      <li class="feature broken">
+  <div class="collapsible-header indigo lighten-1 waves-effect waves-light">
+    <i class="material-icons">featured_play_list</i>
+    <b>Funcionalidade</b>&nbsp;Verificar a Dog API&nbsp;(3.953s)
+  </div>
+
+  <div class="collapsible-body indigo lighten-4">
+    <div class="collection scenarioList indigo">
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s0">
+          <b>Cenário</b> Listar todas as raças disponíveis&nbsp;(0.698s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s1">
+          <b>Cenário</b> Verificar se a raça &#39;retriever&#39; está presente na lista&nbsp;(0.637s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s2">
+          <b>Cenário</b> Obter imagem de uma raça específica&nbsp;(0.626s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s3">
+          <b>Cenário</b> Obter imagem aleatória&nbsp;(0.649s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text passed" href="#g0f0s4">
+          <b>Cenário</b> Validar contrato da lista de raças&nbsp;(0.693s)
+        </a>
+      
+        <a class="collection-item scenario modal-trigger waves-effect waves-light white-text failed" href="#g0f0s5">
+          <b>Cenário</b> Validar contrato com schema inválido&nbsp;(0.649s)
+        </a>
+      
+    </div>
+  </div>
+</li>
+
+  
+</ul>
+
+        </div>
+
+        <div id="summary" class="col s12 indigo lighten-5">
+          <table id="summaryTable" class="bordered indigo lighten-1 white-text" width="100%">
+  <thead>
+  <tr>
+    <th class="hide-on-small-only">Feature</th>
+    <th>Scenario</th>
+    <th class="hide">Tags</th>
+    <th>Status</th>
+
+
+    
+
+    <th class="hide-on-small-only">Error</th>
+  </tr>
+  </thead>
+  <tbody>
+  
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s0">
+  Listar todas as raças disponíveis
+</td>
+
+<td class="hide">
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s1">
+  Verificar se a raça &#39;retriever&#39; está presente na lista
+</td>
+
+<td class="hide">
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s2">
+  Obter imagem de uma raça específica
+</td>
+
+<td class="hide">
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s3">
+  Obter imagem aleatória
+</td>
+
+<td class="hide">
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="passed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s4">
+  Validar contrato da lista de raças
+</td>
+
+<td class="hide">
+  
+</td>
+
+<td class="uppercase">
+  passed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+</td>
+
+          </tr>
+      
+          
+          <tr class="failed">
+            <td class="hide-on-small-only">
+  Verificar a Dog API
+</td>
+
+<td class="hoverable modal-trigger white-text" data-target="g0f0s5">
+  Validar contrato com schema inválido
+</td>
+
+<td class="hide">
+  
+      
+          @schema_fail. 
+      
+  
+</td>
+
+<td class="uppercase">
+  failed
+</td>
+
+
+
+<td class="hide-on-small-only">
+  
+      The property &#39;#/&#39; did not contain a required property of &#39;erro_na_resposta&#39; (JSON::Schema::ValidationError)
+  
+</td>
+
+          </tr>
+      
+  
+  </tbody>
+</table>
+
+        </div>
+
+        <div id="errors" class="col s12 indigo lighten-5">
+          <ul class="errorList collapsible popout" data-collapsible="expandable">
+  
+      <li class="error">
+  <div class="collapsible-header red lighten-2 white-text waves-effect waves-light">
+    <i class="material-icons">bug_report</i>The property &#39;#/&#39; did not contain a required property of &#39;erro_na_resposta&#39; (JSON::Schema::ValidationError)
+  </div>
+
+  <div class="collapsible-body indigo lighten-4">
+    <div class="collection failedScenarioList">
+      
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+          
+              
+                  
+                      <a class="collection-item failedScenario indigo lighten-5 red-text modal-trigger waves-effect waves-light" href="#g0f0s5">
+                        <i class="material-icons">highlight_off</i>&nbsp;Validar contrato com schema inválido
+                      </a>
+                  
+              
+          
+      
+    </div>
+  </div>
+</li>
+
+  
+</ul>
+
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer indigo lighten-4">
+  <div class="footer-copyright indigo lighten-1">
+    <div class="container">
+      Happy Reporting!
+      <a class="white-text text-lighten-4 right" href="https://reportbuilder.rajatthareja.com">Generated by Report Builder</a>
+    </div>
+  </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.rawgit.com/rajatthareja/ReportBuilder/v1.9/js/report.builder.min.js"></script>
+
+
+
+
+
+  </body>
+</html>

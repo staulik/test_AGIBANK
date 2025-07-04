@@ -1,0 +1,421 @@
+[
+  {
+    "id": "verificar-a-dog-api",
+    "uri": "features/specifications/dog_api.feature",
+    "keyword": "Funcionalidade",
+    "name": "Verificar a Dog API",
+    "description": "",
+    "line": 3,
+    "elements": [
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 31700
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;listar-todas-as-raças-disponíveis",
+        "keyword": "Cenário",
+        "name": "Listar todas as raças disponíveis",
+        "description": "",
+        "line": 8,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço a requisição para listar raças",
+            "line": 9,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 662022100
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o status da resposta deve ser 200",
+            "line": 10,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 7943300
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "a lista de raças deve conter várias raças",
+            "line": 11,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:42"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 27954500
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 56700
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;verificar-se-a-raça-'retriever'-está-presente-na-lista",
+        "keyword": "Cenário",
+        "name": "Verificar se a raça 'retriever' está presente na lista",
+        "description": "",
+        "line": 13,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço a requisição para listar raças",
+            "line": 14,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:6"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 611914200
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o status da resposta deve ser 200",
+            "line": 15,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 140100
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o corpo deve conter a raça \"retriever\"",
+            "line": 16,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:25"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 24565800
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 90200
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;obter-imagem-de-uma-raça-específica",
+        "keyword": "Cenário",
+        "name": "Obter imagem de uma raça específica",
+        "description": "",
+        "line": 18,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço a requisição de imagens da raça \"retriever\"",
+            "line": 19,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:11"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 612503600
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o status da resposta deve ser 200",
+            "line": 20,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 129500
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o corpo deve conter URLs de imagens",
+            "line": 21,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:34"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 13736200
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 64000
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;obter-imagem-aleatória",
+        "keyword": "Cenário",
+        "name": "Obter imagem aleatória",
+        "description": "",
+        "line": 23,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Quando ",
+            "name": "faço a requisição de imagem aleatória",
+            "line": 24,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:16"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 636929800
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "o status da resposta deve ser 200",
+            "line": 25,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:21"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 132800
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "o corpo deve conter uma URL de imagem@schema",
+            "line": 26,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:61"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 12352800
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 62800
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;validar-contrato-da-lista-de-raças",
+        "keyword": "Cenário",
+        "name": "Validar contrato da lista de raças",
+        "description": "",
+        "line": 28,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu faça uma requisição para listar todas as raças",
+            "line": 29,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 590857200
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a resposta deve conter status 200",
+            "line": 30,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 131700
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "valido o schema \"features/schemas/schema_lista_racas.json\"",
+            "line": 31,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:48"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 102026300
+            }
+          }
+        ]
+      },
+      {
+        "keyword": "Contexto",
+        "name": "",
+        "description": "",
+        "line": 5,
+        "type": "background",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que a API Dog está disponível",
+            "line": 6,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:1"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 21200
+            }
+          }
+        ]
+      },
+      {
+        "id": "verificar-a-dog-api;validar-contrato-com-schema-inválido",
+        "keyword": "Cenário",
+        "name": "Validar contrato com schema inválido",
+        "description": "",
+        "line": 34,
+        "type": "scenario",
+        "steps": [
+          {
+            "keyword": "Dado ",
+            "name": "que eu faça uma requisição para listar todas as raças",
+            "line": 35,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:52"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 635909700
+            }
+          },
+          {
+            "keyword": "Então ",
+            "name": "a resposta deve conter status 200",
+            "line": 36,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:57"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 177700
+            }
+          },
+          {
+            "keyword": "E ",
+            "name": "valido o schema \"features/schemas/schema_errado.json\"",
+            "line": 37,
+            "match": {
+              "location": "features/step_definitions/dog_api_steps.rb:48"
+            },
+            "result": {
+              "status": "failed",
+              "error_message": "The property '#/' did not contain a required property of 'erro_na_resposta' (JSON::Schema::ValidationError)\n./features/pages/dog_api.rb:80:in `validar_schema'\n./features/step_definitions/dog_api_steps.rb:49:in `\"valido o schema {string}\"'\nfeatures/specifications/dog_api.feature:37:in `valido o schema \"features/schemas/schema_errado.json\"'",
+              "duration": 13146900
+            }
+          }
+        ],
+        "tags": [
+          {
+            "name": "@schema_fail",
+            "line": 33
+          }
+        ]
+      }
+    ]
+  }
+]

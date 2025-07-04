@@ -1,0 +1,15 @@
+{
+  "type": "object",
+  "required": [
+    "erro_na_resposta",
+    "status_invalido"
+  ],
+  "properties": {
+    "erro_na_resposta": {
+      "type": "integer"
+    },
+    "status_invalido": {
+      "type": "string"
+    }
+  }
+}
