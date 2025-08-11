@@ -1,49 +1,96 @@
-name: Run API Tests
+name: Run API Tests - Ruby + ReportBuilder + Email
 
 on:
   push:
-    branches:
-      - main
-
+    branches: [ main ]
   pull_request:
-    branches:
-      - main
-
+    branches: [ main ]
   schedule:
-    - cron: '10 20 * * *'  # Toda sexta-feira às 19h (horário de Brasília / UTC-3)
+    - cron: '0 22 * * 5' # 19h BRT
 
 jobs:
-  api-tests:
+  test:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout do código
-        uses: actions/checkout@v3
+        uses: actions/checkout@v2
 
       - name: Instalar Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.2'  # Altere conforme necessário
+          ruby-version: '3.2'
 
       - name: Instalar bundler e dependências
         run: |
           gem install bundler
           bundle install
 
-      - name: Executar testes e gerar relatório
-        run: RUBYOPT='-W:no-deprecated' bundle exec cucumber -p default || true
+      - name: Executar testes (gera JSON do Cucumber)
+        run: |
+          mkdir -p tmp
+          bundle exec cucumber --publish-quiet --strict --format json --out tmp/cucumber.json || echo "tests_failed=true" >> $GITHUB_ENV
 
-      - name: Upload do relatório ReportBuilder
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: relatorio-dog-api
-          path: report_builder/*.html
+      - name: Criar script do ReportBuilder
+        run: |
+          cat > report_builder.rb <<'RUBY'
+          require 'report_builder'
+          require 'time'
+          ReportBuilder.configure do |config|
+            config.input_path = 'tmp/cucumber.json'
+            config.report_path = 'report_builder/report'
+            config.report_types = [:html]
+            config.report_title = 'Relatório Cucumber - ReportBuilder'
+            config.color = 'indigo'
+            config.additional_info = { 'Gerado em' => Time.now.iso8601 }
+          end
+          ReportBuilder.build_report
+          RUBY
 
-      - name: Upload do relatório Cucumber HTML
-        if: always()
-        uses: actions/upload-artifact@v4
+      - name: Gerar HTML com ReportBuilder
+        run: |
+          mkdir -p report_builder
+          ruby report_builder.rb
+
+      - name: Definir data e nome do relatório
+        id: vars
+        run: |
+          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_OUTPUT
+          echo "filename=Report_Cucumber_${{ steps.vars.outputs.date }}.zip" >> $GITHUB_OUTPUT
+
+      - name: Compactar relatório
+        run: |
+          cd report_builder
+          zip -r "${{ steps.vars.outputs.filename }}" report.html
+
+      - name: Criar corpo do e-mail
+        run: |
+          echo "📊 Relatório de Testes Automatizados (Cucumber/ReportBuilder)" > email_body.txt
+          if [[ "${{ env.tests_failed }}" == "true" ]]; then
+            echo "❌ FALHAS detectadas nos testes." >> email_body.txt
+          else
+            echo "✅ Todos os testes passaram com sucesso!" >> email_body.txt
+          fi
+          echo "" >> email_body.txt
+          echo "Anexo: ${{ steps.vars.outputs.filename }}" >> email_body.txt
+
+      - name: Enviar relatório por e-mail (anexo ZIP)
+        uses: dawidd6/action-send-mail@v3
         with:
-          name: cucumber-html-report
-          path: report_builder/cucumber_report.html
+          server_address: smtp.gmail.com
+          server_port: 465
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: Relatório Cucumber - ${{ steps.vars.outputs.date }}
+          to: staulik10@gmail.com
+          cc: silvio.aulik@gmail.com, qatadeu@gmail.com
+          from: ${{ secrets.EMAIL_USERNAME }}
+          secure: true
+          body: file://email_body.txt
+          attachments: |
+            report_builder/${{ steps.vars.outputs.filename }}
+
+      - name: Finalização
+        run: echo "✅ Pipeline finalizada com sucesso e relatório enviado por e-mail!"
+l
 
