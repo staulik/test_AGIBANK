@@ -31,26 +31,37 @@ jobs:
           mkdir -p tmp
           bundle exec cucumber --publish-quiet --strict --format json --out tmp/cucumber.json || echo "tests_failed=true" >> $GITHUB_ENV
 
-      - name: Criar script do ReportBuilder
+      - name: Criar script do ReportBuilder (silencia deprecation warnings)
         run: |
           cat > report_builder.rb <<'RUBY'
+          # Silenciar avisos deprecados ANTES de carregar a gem
+          begin
+            if defined?(Warning) && Warning.respond_to?(:[]=)
+              Warning[:deprecated] = false
+              Warning[:experimental] = false
+            end
+          rescue
+          end
+
           require 'report_builder'
           require 'time'
+
           ReportBuilder.configure do |config|
-            config.input_path = 'tmp/cucumber.json'
-            config.report_path = 'report_builder/report'
+            config.input_path   = 'tmp/cucumber.json'
+            config.report_path  = 'report_builder/report'
             config.report_types = [:html]
             config.report_title = 'Relatório Cucumber - ReportBuilder'
-            config.color = 'indigo'
+            config.color        = 'indigo'
             config.additional_info = { 'Gerado em' => Time.now.iso8601 }
           end
+
           ReportBuilder.build_report
           RUBY
 
       - name: Gerar HTML com ReportBuilder (sem warnings)
         run: |
           mkdir -p report_builder
-          RUBYOPT='-W0' ruby report_builder.rb
+          RUBYOPT='-W0' ruby report_builder.rb 2>/dev/null
 
       - name: Definir data e nome do relatório
         id: vars
