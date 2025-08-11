@@ -1,4 +1,4 @@
-name: Run API Tests - Ruby + ReportBuilder + Email
+name: Run API Tests - Ruby | ReportBuilder | Email
 
 on:
   push:
