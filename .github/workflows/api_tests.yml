@@ -92,5 +92,5 @@ jobs:
 
       - name: Finalização
         run: echo "✅ Pipeline finalizada com sucesso e relatório enviado por e-mail!"
-l
+
 
